@@ -1,6 +1,6 @@
 # make-money-machine-web
 
-![Screenshot 2025-02-12 at 12-21-34 Money Making Website](https://github.com/user-attachments/assets/aa92f2a7-0cd8-447f-ac20-04ac0e8b379d)
+![FireShot Capture 048 - Money Making Website - ](https://github.com/user-attachments/assets/225c630f-4166-4518-93b8-fb55f394c251)
 
 ## Overview
 
