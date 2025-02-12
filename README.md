@@ -37,7 +37,7 @@ This is a fun, interactive web application that simulates earning money online. 
 1.  **Clone the Repository (Optional):** If you're using version control, clone the repository to your local machine:
 
     ```bash
-    git clone [[repository URL]](https://github.com/blockode-co/make-money-machine-web.git)
+    git clone https://github.com/blockode-co/make-money-machine-web.git
     ```
 
 2.  **Create Files:** Create the following files in a directory:
