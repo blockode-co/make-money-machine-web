@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: white; /* Ensure the iframe has a white background */
+        }
+
+        
+body {
+margin: 0;
+overflow: hidden;
+background-color: #1a1a1a;
+font-family: Arial, sans-serif;
+cursor: url(' 24"><circle cx="12" cy="12" r="10" fill="%2300ff00" /></svg>') 12 12, auto;
+}
+canvas {
+display: block;
+}
+#overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #00ff00;
+pointer-events: none;
+}
+h1 {
+font-size: 3em;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+margin: 0;
+}
+button {
+padding: 15px 30px;
+font-size: 1.2em;
+background-color: #00ff00;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+pointer-events: auto;
+margin-top: 20px;
+}
+#how-it-works {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+color: #00ff00;
+font-size: 1em;
+text-align: center;
+cursor: pointer;
+pointer-events: auto;
+}
+#how-it-works-content {
+display: none;
+margin-top: 10px;
+font-size: 0.9em;
+}
+#progress-bar {
+width: 200px;
+height: 10px;
+background-color: #333;
+border-radius: 5px;
+margin: 20px auto;
+overflow: hidden;
+}
+#progress {
+width: 0%;
+height: 100%;
+background-color: #00ff00;
+transition: width 0.3s ease;
+}
+#controls {
+position: absolute;
+top: 20px;
+right: 20px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+#controls button {
+padding: 10px 20px;
+font-size: 1em;
+}
+#earnings-per-hour {
+margin-top: 10px;
+font-size: 1.2em;
+}
+#earnings-per-hour input {
+width: 100px;
+padding: 5px;
+background-color: #333;
+border: 1px solid #00ff00;
+color: #00ff00;
+font-size: 1em;
+}
+#earnings-per-hour label {
+margin-right: 10px;
+}
+#overlay button {
+background-color: #00ff00;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+pointer-events: auto;
+}
+#overlay button:hover {
+background-color: #00cc00;
+}
+
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Making Website</title>
+<style>
+body {
+margin: 0;
+overflow: hidden;
+background-color: #1a1a1a;
+font-family: Arial, sans-serif;
+cursor: url(' 24"><circle cx="12" cy="12" r="10" fill="%2300ff00" /></svg>') 12 12, auto;
+}
+canvas {
+display: block;
+}
+#overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #00ff00;
+pointer-events: none;
+}
+h1 {
+font-size: 3em;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+margin: 0;
+}
+button {
+padding: 15px 30px;
+font-size: 1.2em;
+background-color: #00ff00;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+pointer-events: auto;
+margin-top: 20px;
+}
+#how-it-works {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+color: #00ff00;
+font-size: 1em;
+text-align: center;
+cursor: pointer;
+pointer-events: auto;
+}
+#how-it-works-content {
+display: none;
+margin-top: 10px;
+font-size: 0.9em;
+}
+#progress-bar {
+width: 200px;
+height: 10px;
+background-color: #333;
+border-radius: 5px;
+margin: 20px auto;
+overflow: hidden;
+}
+#progress {
+width: 0%;
+height: 100%;
+background-color: #00ff00;
+transition: width 0.3s ease;
+}
+#controls {
+position: absolute;
+top: 20px;
+right: 20px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+#controls button {
+padding: 10px 20px;
+font-size: 1em;
+}
+#earnings-per-hour {
+margin-top: 10px;
+font-size: 1.2em;
+}
+#earnings-per-hour input {
+width: 100px;
+padding: 5px;
+background-color: #333;
+border: 1px solid #00ff00;
+color: #00ff00;
+font-size: 1em;
+}
+#earnings-per-hour label {
+margin-right: 10px;
+}
+#overlay button {
+background-color: #00ff00;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+pointer-events: auto;
+}
+#overlay button:hover {
+background-color: #00cc00;
+}
+</style>
+</head>
+<body>
+<canvas id="moneyCanvas"></canvas>
+<div id="overlay">
+<h1>Make Money Online!</h1>
+<button onclick="startMakingMoney()">Start Making Money!</button>
+<div id="progress-bar">
+<div id="progress"></div>
+</div>
+<div id="earnings-per-hour">
+<label for="earnings-input">Earnings Per Hour: $</label>
+<input type="number" id="earnings-input" value="100" min="1" onchange="updateEarningsPerHour()">
+</div>
+</div>
+<div id="controls">
+<button onclick="toggleMusic()">🎵 Music: On</button>
+<button onclick="reset()">🔄 Reset</button>
+</div>
+<div id="how-it-works" onclick="toggleHowItWorks()">
+🔍 How It Works
+<div id="how-it-works-content">
+Click the button to start making money. The longer you wait, the more you earn!
+</div>
+</div>
+<script>
+const canvas = document.getElementById('moneyCanvas');
+const ctx = canvas.getContext('2d');
+let isAnimating = false;
+let money = 0;
+let multiplier = 1;
+let earningsPerHour = 100; // Default earnings per hour
+let isMusicPlaying = true;
+const clickSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2369/2369-preview.mp3'); // Replace with your sound file
+const moneySound = new Audio('https://assets.mixkit.co/active_storage/sfx/965/965-preview.mp3'); // Replace with your sound file
+const backgroundMusic = new Audio('https://assets.mixkit.co/music/preview/mixkit-happy-times-158.mp3'); // Replace with your background music file
+backgroundMusic.loop = true;
+
+// Set canvas size to window size
+function resizeCanvas() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Money symbols
+const symbols = ['💰', '💵', '💎'];
+const particles = [];
+
+class Particle {
+constructor() {
+this.reset();
+}
+reset() {
+this.x = Math.random() * canvas.width;
+this.y = -20;
+this.speed = 2 + Math.random() * 4;
+this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+this.size = 20 + Math.random() * 20;
+this.rotation = Math.random() * Math.PI * 2;
+this.rotationSpeed = (Math.random() - 0.5) * 0.1;
+}
+update() {
+this.y += this.speed;
+this.rotation += this.rotationSpeed;
+if (this.y > canvas.height) {
+this.reset();
+}
+}
+draw() {
+ctx.save();
+ctx.translate(this.x, this.y);
+ctx.rotate(this.rotation);
+ctx.fillStyle = '#00ff00';
+ctx.font = `${this.size}px Arial`;
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText(this.symbol, 0, 0);
+ctx.restore();
+}
+}
+
+// Create initial particles
+for (let i = 0; i < 200; i++) {
+particles.push(new Particle());
+}
+
+function animate() {
+if (!isAnimating) return;
+ctx.fillStyle = 'rgba(26, 26, 26, 0.1)';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+particles.forEach(particle => {
+particle.update();
+particle.draw();
+});
+money += (earningsPerHour / 3600) * multiplier; // Earnings per second
+document.querySelector('h1').textContent = `Earnings: $${money.toFixed(2).toLocaleString()}`;
+updateProgressBar();
+requestAnimationFrame(animate);
+}
+
+function startMakingMoney() {
+if (!isAnimating) {
+isAnimating = true;
+animate();
+document.querySelector('button').textContent = 'Making Money!';
+multiplier += 0.1; // Increase multiplier over time
+clickSound.play();
+if (isMusicPlaying) {
+backgroundMusic.play();
+}
+} else {
+multiplier += 0.5; // Bonus multiplier on subsequent clicks
+moneySound.play();
+}
+}
+
+function updateProgressBar() {
+const progress = Math.min((money / earningsPerHour) * 100, 100); // Simulate progress based on earnings
+document.getElementById('progress').style.width = `${progress}%`;
+}
+
+function toggleHowItWorks() {
+const content = document.getElementById('how-it-works-content');
+content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleMusic() {
+isMusicPlaying = !isMusicPlaying;
+if (isMusicPlaying) {
+backgroundMusic.play();
+document.querySelector('#controls button').textContent = '🎵 Music: On';
+} else {
+backgroundMusic.pause();
+document.querySelector('#controls button').textContent = '🎵 Music: Off';
+}
+}
+
+function reset() {
+isAnimating = false;
+money = 0;
+multiplier = 1;
+document.querySelector('h1').textContent = 'Make Money Online!';
+document.querySelector('button').textContent = 'Start Making Money!';
+document.getElementById('progress').style.width = '0%';
+clickSound.play();
+}
+
+function updateEarningsPerHour() {
+earningsPerHour = parseFloat(document.getElementById('earnings-input').value) || 100;
+}
+</script>
+</body>
+</html>
+
+
+
+    <script>
+        
+const canvas = document.getElementById('moneyCanvas');
+const ctx = canvas.getContext('2d');
+let isAnimating = false;
+let money = 0;
+let multiplier = 1;
+let earningsPerHour = 100; // Default earnings per hour
+let isMusicPlaying = true;
+const clickSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2369/2369-preview.mp3'); // Replace with your sound file
+const moneySound = new Audio('https://assets.mixkit.co/active_storage/sfx/965/965-preview.mp3'); // Replace with your sound file
+const backgroundMusic = new Audio('https://assets.mixkit.co/music/preview/mixkit-happy-times-158.mp3'); // Replace with your background music file
+backgroundMusic.loop = true;
+
+// Set canvas size to window size
+function resizeCanvas() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Money symbols
+const symbols = ['💰', '💵', '💎'];
+const particles = [];
+
+class Particle {
+constructor() {
+this.reset();
+}
+reset() {
+this.x = Math.random() * canvas.width;
+this.y = -20;
+this.speed = 2 + Math.random() * 4;
+this.symbol = symbols[Math.floor(Math.random() * symbols.length)];
+this.size = 20 + Math.random() * 20;
+this.rotation = Math.random() * Math.PI * 2;
+this.rotationSpeed = (Math.random() - 0.5) * 0.1;
+}
+update() {
+this.y += this.speed;
+this.rotation += this.rotationSpeed;
+if (this.y > canvas.height) {
+this.reset();
+}
+}
+draw() {
+ctx.save();
+ctx.translate(this.x, this.y);
+ctx.rotate(this.rotation);
+ctx.fillStyle = '#00ff00';
+ctx.font = `${this.size}px Arial`;
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText(this.symbol, 0, 0);
+ctx.restore();
+}
+}
+
+// Create initial particles
+for (let i = 0; i < 200; i++) {
+particles.push(new Particle());
+}
+
+function animate() {
+if (!isAnimating) return;
+ctx.fillStyle = 'rgba(26, 26, 26, 0.1)';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+particles.forEach(particle => {
+particle.update();
+particle.draw();
+});
+money += (earningsPerHour / 3600) * multiplier; // Earnings per second
+document.querySelector('h1').textContent = `Earnings: $${money.toFixed(2).toLocaleString()}`;
+updateProgressBar();
+requestAnimationFrame(animate);
+}
+
+function startMakingMoney() {
+if (!isAnimating) {
+isAnimating = true;
+animate();
+document.querySelector('button').textContent = 'Making Money!';
+multiplier += 0.1; // Increase multiplier over time
+clickSound.play();
+if (isMusicPlaying) {
+backgroundMusic.play();
+}
+} else {
+multiplier += 0.5; // Bonus multiplier on subsequent clicks
+moneySound.play();
+}
+}
+
+function updateProgressBar() {
+const progress = Math.min((money / earningsPerHour) * 100, 100); // Simulate progress based on earnings
+document.getElementById('progress').style.width = `${progress}%`;
+}
+
+function toggleHowItWorks() {
+const content = document.getElementById('how-it-works-content');
+content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleMusic() {
+isMusicPlaying = !isMusicPlaying;
+if (isMusicPlaying) {
+backgroundMusic.play();
+document.querySelector('#controls button').textContent = '🎵 Music: On';
+} else {
+backgroundMusic.pause();
+document.querySelector('#controls button').textContent = '🎵 Music: Off';
+}
+}
+
+function reset() {
+isAnimating = false;
+money = 0;
+multiplier = 1;
+document.querySelector('h1').textContent = 'Make Money Online!';
+document.querySelector('button').textContent = 'Start Making Money!';
+document.getElementById('progress').style.width = '0%';
+clickSound.play();
+}
+
+function updateEarningsPerHour() {
+earningsPerHour = parseFloat(document.getElementById('earnings-input').value) || 100;
+}
+
+
+    </script>
+</body>
+</html>
